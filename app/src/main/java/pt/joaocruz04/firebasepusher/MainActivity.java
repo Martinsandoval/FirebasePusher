@@ -31,10 +31,25 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.p3_update).setOnClickListener(button_action);
         findViewById(R.id.p3_delete).setOnClickListener(button_action);
 
+        findViewById(R.id.p4_add).setOnClickListener(button_action);
+        findViewById(R.id.p4_update).setOnClickListener(button_action);
+        findViewById(R.id.p4_delete).setOnClickListener(button_action);
+
+        findViewById(R.id.p5_add).setOnClickListener(button_action);
+        findViewById(R.id.p5_update).setOnClickListener(button_action);
+        findViewById(R.id.p5_delete).setOnClickListener(button_action);
+
+        findViewById(R.id.p6_add).setOnClickListener(button_action);
+        findViewById(R.id.p6_update).setOnClickListener(button_action);
+        findViewById(R.id.p6_delete).setOnClickListener(button_action);
+
 
         events.add(new Event("1", null, new Author("john", "P1")));
         events.add(new Event("2", null, new Author("mike", "P2")));
         events.add(new Event("3", null, new Author("peter", "P3")));
+        events.add(new Event("4", null, new Author("ann", "P4")));
+        events.add(new Event("5", null, new Author("mary", "P5")));
+        events.add(new Event("6", null, new Author("julia", "P6")));
 
     }
 
@@ -45,11 +60,11 @@ public class MainActivity extends AppCompatActivity {
             int tag = Integer.parseInt((String)v.getTag());
             int id = v.getId();
 
-            if (id==R.id.p1_add || id==R.id.p2_add || id==R.id.p3_add) {
+            if (id==R.id.p1_add || id==R.id.p2_add || id==R.id.p3_add || id==R.id.p4_add || id==R.id.p5_add || id==R.id.p6_add) {
                 addEvent(events.get(tag-1));
-            } else if (id==R.id.p1_update|| id==R.id.p2_update || id==R.id.p3_update) {
+            } else if (id==R.id.p1_update|| id==R.id.p2_update || id==R.id.p3_update || id==R.id.p4_update || id==R.id.p5_update || id==R.id.p6_update) {
                 updateEvent(events.get(tag-1));
-            } else if (id==R.id.p1_delete|| id==R.id.p2_delete || id==R.id.p3_delete) {
+            } else if (id==R.id.p1_delete|| id==R.id.p2_delete || id==R.id.p3_delete || id==R.id.p4_delete || id==R.id.p5_delete || id==R.id.p6_delete) {
                 deleteEvent(events.get(tag-1));
             }
         }

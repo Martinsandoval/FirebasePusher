@@ -103,4 +103,99 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:text="P4 ADD"
+            android:id="@+id/p4_add"
+            android:tag="4"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="P4 UPDATE"
+            android:id="@+id/p4_update"
+            android:tag="4"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="P4 DELETE"
+            android:id="@+id/p4_delete"
+            android:tag="4"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:text="P5 ADD"
+            android:id="@+id/p5_add"
+            android:tag="5"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="P5 UPDATE"
+            android:id="@+id/p5_update"
+            android:tag="5"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="P5 DELETE"
+            android:id="@+id/p5_delete"
+            android:tag="5"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:text="P6 ADD"
+            android:id="@+id/p6_add"
+            android:tag="6"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="P6 UPDATE"
+            android:id="@+id/p6_update"
+            android:tag="6"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="P6 DELETE"
+            android:id="@+id/p6_delete"
+            android:tag="6"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
 </LinearLayout>
