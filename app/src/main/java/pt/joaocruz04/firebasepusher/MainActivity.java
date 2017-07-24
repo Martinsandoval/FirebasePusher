@@ -61,39 +61,22 @@ public class MainActivity extends AppCompatActivity {
             int id = v.getId();
 
             if (id==R.id.p1_add || id==R.id.p2_add || id==R.id.p3_add || id==R.id.p4_add || id==R.id.p5_add || id==R.id.p6_add) {
-                addEvent(events.get(tag-1));
+                setEventType(events.get(tag-1), "ADD");
             } else if (id==R.id.p1_update|| id==R.id.p2_update || id==R.id.p3_update || id==R.id.p4_update || id==R.id.p5_update || id==R.id.p6_update) {
-                updateEvent(events.get(tag-1));
+                setEventType(events.get(tag-1), "UPDATE");
             } else if (id==R.id.p1_delete|| id==R.id.p2_delete || id==R.id.p3_delete || id==R.id.p4_delete || id==R.id.p5_delete || id==R.id.p6_delete) {
-                deleteEvent(events.get(tag-1));
+                setEventType(events.get(tag-1), "DELETE");
             }
         }
     };
 
-
-    private void addEvent(Event e) {
+    private void setEventType(Event e, String type) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("feeds").push();
-        e.type = "ADD";
+        e.type = type;
         e.author.displayName = "" + e.author.name + " " + Calendar.getInstance().getTimeInMillis();
         myRef.setValue(e);
 
     }
 
-    private void updateEvent(Event e) {
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("feeds").push();
-        e.type = "UPDATE";
-        e.author.displayName = "" + e.author.name + " " + Calendar.getInstance().getTimeInMillis();
-        myRef.setValue(e);
-    }
-
-    private void deleteEvent(Event e) {
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("feeds").push();
-        e.type = "DELETE";
-        e.author.displayName = "" + e.author.name + " " + Calendar.getInstance().getTimeInMillis();
-        myRef.setValue(e);
-
-    }
 }
