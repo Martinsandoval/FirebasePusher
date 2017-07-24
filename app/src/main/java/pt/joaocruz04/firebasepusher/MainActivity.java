@@ -61,11 +61,11 @@ public class MainActivity extends AppCompatActivity {
             int id = v.getId();
 
             if (id==R.id.p1_add || id==R.id.p2_add || id==R.id.p3_add || id==R.id.p4_add || id==R.id.p5_add || id==R.id.p6_add) {
-                setEventType(vents.get(tag-1), "ADD");
+                setEventType(events.get(tag-1), "ADD");
             } else if (id=updateEvent(events.get(tag-1));=R.id.p1_update|| id==R.id.p2_update || id==R.id.p3_update || id==R.id.p4_update || id==R.id.p5_update || id==R.id.p6_update) {
-                setEventType(vents.get(tag-1), "UPDATE");
+                setEventType(events.get(tag-1), "UPDATE");
             } else if (id==R.id.p1_delete|| id==R.id.p2_delete || id==R.id.p3_delete || id==R.id.p4_delete || id==R.id.p5_delete || id==R.id.p6_delete) {
-                setEventType(vents.get(tag-1), "DELETE");
+                setEventType(events.get(tag-1), "DELETE");
             }
         }
     };
